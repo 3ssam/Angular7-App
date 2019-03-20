@@ -4,6 +4,6 @@
 <label>User name</label>
 <input type="text"
 class="form-control"
-(input)="onCreateUser($event)">
+[(ngModel)]="users">
 <button class="btn btn-primary" [disabled]="!flag" (click)="onAddUser()">Add Other User</button>
 <p> {{users}} </p>
