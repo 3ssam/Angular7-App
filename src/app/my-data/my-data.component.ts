@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyDataComponent implements OnInit {
 
   name: string = "Essam";
+  users: string = "Can`t add new user";
   age: number = 23;
   flag: boolean = false;
 
@@ -22,6 +23,10 @@ export class MyDataComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onAddUser(){
+    this.users = "now you can add user";
   }
 
 }
