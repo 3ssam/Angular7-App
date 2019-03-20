@@ -6,4 +6,8 @@
 class="form-control"
 [(ngModel)]="users">
 <button class="btn btn-primary" (click)="onAddUser()">Add Other User</button>
-<p> {{username}} </p>
+<p *ngIf="UserEnter ; else defulat"> the user new user is {{username}} </p>
+<<ng-template #defulat>
+  <p>No user now</p>
+</ng-template>
+
