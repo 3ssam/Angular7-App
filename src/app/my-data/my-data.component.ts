@@ -29,4 +29,8 @@ export class MyDataComponent implements OnInit {
     this.users = "now you can add user";
   }
 
+  onCreateUser(event:any){
+    this.users = (<HTMLInputElement>event.target).value;
+  }
+
 }

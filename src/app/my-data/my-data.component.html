@@ -1,5 +1,9 @@
 <p style="text-align: center">
   My {{'Name'}} is {{name}} and my age is {{getMyAge()}}
 </p>
+<label>User name</label>
+<input type="text"
+class="form-control"
+(input)="onCreateUser($event)">
 <button class="btn btn-primary" [disabled]="!flag" (click)="onAddUser()">Add Other User</button>
 <p> {{users}} </p>
