@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  //selector: '[app-my-data]',          //attribute 
-  //selector: '.app-my-data',           //class
-  selector: 'app-my-data',              //tag
-  //templateUrl: './my-data.component.html',
-  template: '<p style="text-align: center">My-Data-Component</p>',
+  selector: 'app-my-data',
+  templateUrl: './my-data.component.html',
   styleUrls: ['./my-data.component.css']
-  //styles: [`  p{  color: blue;  } `]
 })
 export class MyDataComponent implements OnInit {
 
+  name: string = "Essam";
+  age: number = 23;
+
+  getMyAge(){
+    return this.age;
+  }
   constructor() { }
 
   ngOnInit() {
