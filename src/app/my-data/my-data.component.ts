@@ -9,11 +9,17 @@ export class MyDataComponent implements OnInit {
 
   name: string = "Essam";
   age: number = 23;
+  flag: boolean = false;
 
-  getMyAge(){
+  getMyAge() {
     return this.age;
   }
-  constructor() { }
+
+  constructor() {
+    setTimeout(() => {
+      this.flag = true;
+    }, 2000);
+  }
 
   ngOnInit() {
   }
