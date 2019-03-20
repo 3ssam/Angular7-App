@@ -5,7 +5,10 @@ import { Component, OnInit } from '@angular/core';
   //selector: '.app-my-data',           //class
   selector: 'app-my-data',              //tag
   templateUrl: './my-data.component.html',
-  styleUrls: ['./my-data.component.css']
+  //styleUrls: ['./my-data.component.css']
+  styles: [`
+  p{color: blue;}
+  `]
 })
 export class MyDataComponent implements OnInit {
 
