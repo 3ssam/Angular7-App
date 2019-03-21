@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MyDataComponent implements OnInit {
 
   name: string = "Essam";
+  serverstatus: string = "offline";
   username: string = "Can`t add new user";
   users: string = "";
   age: number = 23;
@@ -20,9 +21,11 @@ export class MyDataComponent implements OnInit {
   }
 
   constructor() {
-    setTimeout(() => {
+    /*setTimeout(() => {
       this.flag = true;
-    }, 2000);
+    }, 2000);*/
+
+    this.serverstatus = (Math.random() > 0.5) ? 'online' : 'offline';
   }
 
   ngOnInit() {
@@ -35,6 +38,10 @@ export class MyDataComponent implements OnInit {
 
   onCreateUser(event:any){
     this.users = (<HTMLInputElement>event.target).value;
+  }
+
+  getColor(){
+    return this.serverstatus === 'online' ? 'green' : 'red';
   }
 
 }

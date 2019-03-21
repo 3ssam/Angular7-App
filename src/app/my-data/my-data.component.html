@@ -1,13 +1,14 @@
 <p style="text-align: center">
   My {{'Name'}} is {{name}} and my age is {{getMyAge()}}
 </p>
+<p [ngStyle]="{backgroundColor: getColor()}" style="text-align: center">{{serverstatus}}</p>
 <label>User name</label>
 <input type="text"
 class="form-control"
 [(ngModel)]="users">
 <button class="btn btn-primary" (click)="onAddUser()">Add Other User</button>
 <p *ngIf="UserEnter ; else defulat"> the user new user is {{username}} </p>
-<<ng-template #defulat>
+<ng-template #defulat>
   <p>No user now</p>
 </ng-template>
 
