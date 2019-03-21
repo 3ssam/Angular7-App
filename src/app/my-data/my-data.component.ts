@@ -16,6 +16,7 @@ export class MyDataComponent implements OnInit {
   age: number = 23;
   flag: boolean = false;
   UserEnter: boolean = false;
+  userlist = ['Hafez','Azzema'];
 
 
   getMyAge() {
@@ -36,6 +37,7 @@ export class MyDataComponent implements OnInit {
   onAddUser(){
     this.username = this.users;
     this.UserEnter = true;
+    this.userlist.push(this.users);
   }
 
   onCreateUser(event:any){

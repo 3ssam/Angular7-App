@@ -11,4 +11,5 @@ class="form-control"
 <ng-template #defulat>
   <p>No user now</p>
 </ng-template>
+<p *ngFor="let item of userlist" [ngClass]="{online:serverstatus==='online'}" [ngStyle]="{backgroundColor: getColor()}" style="text-align: center">{{item}}</p>
 
