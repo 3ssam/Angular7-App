@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-my-data',
   templateUrl: './my-data.component.html',
-  styleUrls: ['./my-data.component.css']
+  styles: [`.online{
+    color:orange
+  }`]
 })
 export class MyDataComponent implements OnInit {
 
