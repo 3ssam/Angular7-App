@@ -6,19 +6,21 @@ import { ServerComponent } from './server/server.component'
 import { from } from 'rxjs';
 import { MyDataComponent } from './my-data/my-data.component';
 import { AssignmentComponent } from './assignment/assignment.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     MyDataComponent,
-    AssignmentComponent
+    AssignmentComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent,AssignmentComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
