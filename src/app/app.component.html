@@ -4,7 +4,12 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-        <app-server-element *ngFor="let serverelement of serverElements" [CustomeElement]=serverelement></app-server-element>
+        <app-server-element *ngFor="let serverelement of serverElements" [CustomeElement]=serverelement>
+          <p>
+            <strong *ngIf="serverelement.type === 'server'" style="color: red">{{ serverelement.content }}</strong>
+            <strong *ngIf="serverelement.type === 'blueprint'">{{ serverelement.content }}</strong>
+          </p>        
+        </app-server-element>
     </div>
   </div>
 </div>
