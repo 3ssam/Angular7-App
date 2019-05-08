@@ -8,8 +8,33 @@
           <p>
             <strong *ngIf="serverelement.type === 'server'" style="color: red">{{ serverelement.content }}</strong>
             <strong *ngIf="serverelement.type === 'blueprint'">{{ serverelement.content }}</strong>
-          </p>        
+          </p>
         </app-server-element>
     </div>
   </div>
 </div>
+
+
+  <input (keyup.enter)="onKey($event)">
+  <p>{{values}}</p>
+
+  <input #box (keyup.enter)="onEnter(box.value)">
+  <p>{{value}}</p>
+
+  <input #box1
+  (keyup.enter)="update(box1.value)"
+  (blur)="update(box1.value)">
+
+<p>{{value}}</p>
+
+
+
+  <input #newHero
+  (keyup.enter)="addHero(newHero.value)"
+  (blur)="addHero(newHero.value); newHero.value='' ">
+
+<button (click)="addHero(newHero.value)">Add</button>
+
+<ul><li *ngFor="let hero of heroes">{{hero}}</li></ul>
+
+

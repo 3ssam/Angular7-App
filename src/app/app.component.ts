@@ -22,4 +22,25 @@ export class AppComponent {
       content: serverData.serverContent
     });
   }
+
+// tslint:disable-next-line: member-ordering
+  values = 'essam';
+
+  onKey(event: any) { // without type info
+    this.values += event.target.value + ' | ';
+  }
+
+  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  addHero(newHero: string) {
+    if (newHero) {
+      this.heroes.push(newHero);
+    }
+  }
+
+  value = 'enter value';
+  onEnter(value: string) { this.value = value; }
+
+  update(value: string) { this.value = value; }
+
+
 }
